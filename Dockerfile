@@ -1,12 +1,11 @@
-FROM centos:centos7
+FROM almalinux:8.10
 
 RUN yum -y update && \
 	yum install -y mc && \
-	yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm && \
-	yum install -y epel-release && \
+	yum install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm && \
 	yum install -y yum-utils && \
-	yum-config-manager --disable 'remi-php*' && \
-	yum-config-manager --enable remi-php82 && \
+	yum module reset php && \
+	yum module -y install php:remi-8.0 && \
 	yum install -y php && \
 	yum install -y git && \
 	yum install -y zip unzip php-zip
@@ -18,6 +17,7 @@ RUN	php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
 	
 RUN composer require google/apiclient:^2.15.0
 	
+VOLUME /usr/local/src
+COPY ./src /usr/local/src
 WORKDIR /usr/local/src
-VOLUME src /usr/local/src
 

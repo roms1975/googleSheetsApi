@@ -1,7 +1,7 @@
 <?php
 	/**
 	* see https://www.nidup.io/blog/manipulate-google-sheets-in-php-with-api
-	* code examples
+	* code examples ..
 	*/
 	require_once(__DIR__ . "/vendor/autoload.php");
 	
