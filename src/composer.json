@@ -1,5 +1,9 @@
 {
+    "config": {
+	"process-timeout": 0
+    },
     "require": {
-        "google/apiclient": "^2.15.0"
+        "google/apiclient": "^2.15.0",
+        "google/apiclient-services": "^0.365.0"
     }
 }

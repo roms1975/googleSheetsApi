@@ -1,7 +1,7 @@
 <?php
 	/**
 	* see https://www.nidup.io/blog/manipulate-google-sheets-in-php-with-api
-	* code examples ..
+	* code examples ...
 	*/
 	require_once(__DIR__ . "/vendor/autoload.php");
 	
@@ -29,8 +29,8 @@
 */
 	/* обновление ячеек */
 	$rows = [
-		[date('Y-m-d H:i:s'), 3333, 333, 33],
-		[date('Y-m-d H:i:s'), 2222, 222, 22]
+		[date('Y-m-d H:i:s'), 777, 77, 7],
+		[date('Y-m-d H:i:s'), 888, 88, 8]
 	];
 	$valueRange = new \Google_Service_Sheets_ValueRange();
 	$valueRange->setValues($rows);
